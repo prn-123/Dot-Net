@@ -1,0 +1,26 @@
+﻿@model EntitiFrameWorkExam.Models.Course
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        Course Name :
+        @Html.TextBox("CourseName");
+    </div>
+    <div>
+        Duration :
+        @Html.TextBox("Duration");
+    </div>
+    <div>
+        Remarks :
+        @Html.TextBox("Remarks");
+    </div>
+    <div>
+       
+        <input type="submit" value="Save" />
+    </div>
+}

@@ -1,0 +1,26 @@
+﻿@model EntitiFrameWorkExam.Models.Course
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        Course Name
+        @Model.CourseName
+    </div>
+    <div>
+        Duration
+        @Model.Duration
+    </div>
+    <div>
+        Remarks
+        @Model.Remarks
+    </div>
+    <div>
+        Do you want to delete?
+        <input type="submit" value="Delete"/>
+    </div>
+}
