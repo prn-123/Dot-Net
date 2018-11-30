@@ -1,0 +1,11 @@
+C:\MVC\nov27\endswith\bin\Debug\netcoreapp2.1\endswith.deps.json
+C:\MVC\nov27\endswith\bin\Debug\netcoreapp2.1\endswith.runtimeconfig.json
+C:\MVC\nov27\endswith\bin\Debug\netcoreapp2.1\endswith.runtimeconfig.dev.json
+C:\MVC\nov27\endswith\bin\Debug\netcoreapp2.1\endswith.dll
+C:\MVC\nov27\endswith\bin\Debug\netcoreapp2.1\endswith.pdb
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.csprojAssemblyReference.cache
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.csproj.CoreCompileInputs.cache
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.AssemblyInfoInputs.cache
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.AssemblyInfo.cs
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.dll
+C:\MVC\nov27\endswith\obj\Debug\netcoreapp2.1\endswith.pdb
