@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<EntityFrameworkEg.Models.Contact>
+@{
+    ViewBag.Title = "Home Page";
+}
+@Html.ActionLink("Create", "Create", "Home")
+<table class="table table-bordered">
+    <tr>
+        <th>Conatact Name</th>
+        <th>Location</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactName</td>
+            <td>@item.Location</td>
+            <td>@Html.ActionLink("Detail", "Detail", new { id = item.ContactId })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = item.ContactId })</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = item.ContactId })</td>
+        </tr>
+    }
+</table>

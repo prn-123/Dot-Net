@@ -1,0 +1,20 @@
+﻿@model EntityFrameworkEg.Models.Contact
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.DisplayNameFor(hello => hello.ContactName)
+        @Html.DisplayFor(hello => hello.ContactName)
+    </div>
+    <div>
+        @Html.DisplayNameFor(hello => hello.Location)
+        @Html.DisplayFor(hello => hello.Location)
+    </div>
+    <div> Are you sure? </div>
+    <input type="submit" value="Delete" />
+ }

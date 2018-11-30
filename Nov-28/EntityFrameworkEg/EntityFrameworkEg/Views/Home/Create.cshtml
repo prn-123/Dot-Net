@@ -1,0 +1,20 @@
+﻿@model EntityFrameworkEg.Models.Contact
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        Name
+        @Html.TextBox("ContactName")
+        @Html.ValidationMessageFor(hi => hi.ContactName)
+    </div>
+    <div>
+        Location
+        @Html.TextBoxFor(hi => hi.Location)
+    </div>
+    <input type="submit" />
+}
