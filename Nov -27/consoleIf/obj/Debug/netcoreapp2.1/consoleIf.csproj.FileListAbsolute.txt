@@ -1,0 +1,11 @@
+C:\MVC\nov27\consoleIf\bin\Debug\netcoreapp2.1\consoleIf.deps.json
+C:\MVC\nov27\consoleIf\bin\Debug\netcoreapp2.1\consoleIf.runtimeconfig.json
+C:\MVC\nov27\consoleIf\bin\Debug\netcoreapp2.1\consoleIf.runtimeconfig.dev.json
+C:\MVC\nov27\consoleIf\bin\Debug\netcoreapp2.1\consoleIf.dll
+C:\MVC\nov27\consoleIf\bin\Debug\netcoreapp2.1\consoleIf.pdb
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.csprojAssemblyReference.cache
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.csproj.CoreCompileInputs.cache
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.AssemblyInfoInputs.cache
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.AssemblyInfo.cs
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.dll
+C:\MVC\nov27\consoleIf\obj\Debug\netcoreapp2.1\consoleIf.pdb
