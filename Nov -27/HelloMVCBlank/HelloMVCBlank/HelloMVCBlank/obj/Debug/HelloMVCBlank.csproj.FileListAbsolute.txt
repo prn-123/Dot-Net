@@ -1,0 +1,7 @@
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\bin\HelloMVCBlank.dll.config
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\bin\HelloMVCBlank.dll
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\bin\HelloMVCBlank.pdb
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\obj\Debug\HelloMVCBlank.csprojAssemblyReference.cache
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\obj\Debug\HelloMVCBlank.csproj.CoreCompileInputs.cache
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\obj\Debug\HelloMVCBlank.dll
+C:\MVC\nov27\HelloMVCBlank\HelloMVCBlank\HelloMVCBlank\obj\Debug\HelloMVCBlank.pdb
