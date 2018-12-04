@@ -1,0 +1,10 @@
+<div>
+  <ul *ngFor = "let c of contacts">
+    <li>
+      <a routerLink ="/detail/{{c.ContactId}}">{{c.ContactName}}</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+
+{{contacts|json}}
