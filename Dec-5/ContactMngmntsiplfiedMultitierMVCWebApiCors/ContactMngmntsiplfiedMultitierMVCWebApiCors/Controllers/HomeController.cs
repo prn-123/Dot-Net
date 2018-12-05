@@ -7,7 +7,7 @@ using ContactMngmntSimplLibBLL;
 
 namespace ContactMngmntsiplfiedMultitierMVCWebApiCors.Controllers
 {
-    public class HomeController : Controller
+    public class   HomeController : Controller
     {
         ContactRepository cr = new ContactRepository();
         public ActionResult Index()

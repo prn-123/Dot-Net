@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContactMngmntSimplLibDAL.Contact>
+﻿@model List<ContactMngmntSimplLibDAL.Contact>
 
 @{
     ViewBag.Title = "Index";
@@ -6,7 +6,7 @@
 <div>
     @foreach(var item in Model)
     {
-
+     <div>@item.ContactName</div>
     }
 </div>
 <h2>Index</h2>
