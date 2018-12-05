@@ -1,0 +1,6 @@
+Add web applicn with mvc framework.
+Add 2 Class Libraries 1 for Data access layer and 1 for Business Logic Layer.
+Add ado.net entity Model in DAL and buid it.
+Add reference of DAL in Web application and BLL.
+Add / install Entity framework from nuget package solution in BLL and WEb Appln.
+Add Connection string of Model from app.config in DAL to Web.Config in both BLL and Web appln.
