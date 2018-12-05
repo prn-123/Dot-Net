@@ -1,0 +1,5 @@
+1.Create a Web appln with mvc framework.
+2.Add a class library BatchManagementDAL(Data access layer)-Add an Ado.Net Entity framework model and build it.
+Copy the Connection string from App.Config in DAL and paste it in Web Appln's web.Config file 
+(below </configSection> and above <appsettings>).
+3.Add a Web api Add refernce of DAL , Add Entity framework , Add Connectionstring and set as startup project when we need
