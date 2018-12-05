@@ -1,28 +1,34 @@
 <div>
   <label>Contact Name</label>
-  <input id="contactName" [(ngModel)]="contact.contactName" type="text" >
+  <input id="contactName" [(ngModel)]="contact.ContactName" type="text" >
 </div>
 <div>
   <label>Location</label>
-  <input id="location" [(ngModel)]="contact.location" type="text" >
+  <input id="location" [(ngModel)]="contact.Location" type="text" >
 </div>
 <input type="button" (click)="saveContactData()" value="save">
 
+<br/>
+<br/>
+<br/>
 
 
 
-<table>
+
+
+<div class="table-responsive">
+<table  class="table">
   <thead>
     <tr>
       <th>Contact Name</th>
       <th>Location</th>
-
     </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of contacts">
-       <td>{{item.contactName}}</td>
-       <td>{{item.location}}</td>
+       <td>{{item.ContactName}}</td>
+       <td>{{item.Location}}</td>
       </tr>
 </tbody>
 </table>
+</div>

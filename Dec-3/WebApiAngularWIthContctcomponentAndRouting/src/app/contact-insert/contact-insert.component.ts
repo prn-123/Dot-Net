@@ -11,6 +11,7 @@ export class ContactInsertComponent implements OnInit {
 
   constructor(private contactservice: ContactService) { }
 
+
   contact: Contact;
   contacts: Contact[];
   ngOnInit() {
@@ -20,19 +21,20 @@ export class ContactInsertComponent implements OnInit {
 
   newBatch(): void {
       this.contact = {
-        contactId: null,
-        contactName: '',
-        location: ''
+        ContactId: null,
+        ContactName: '',
+        Location: ''
       };
   }
 
   getContacts(): void {
     this.contactservice.getContactsSer()
-    .subscribe(b => this.contacts = b);
+    .subscribe(contacts => this.contacts = contacts);
      }
 
 
   saveContactData(): void {
+    console.log('Save Contact Data');
     this.contactservice.saveData(this.contact)
     .subscribe(b => this.contacts.push(b));
     }

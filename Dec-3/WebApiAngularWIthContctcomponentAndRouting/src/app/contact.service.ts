@@ -14,7 +14,7 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  getContactsSerz(): Observable<Contact[]> {
+  getContactsSer(): Observable<Contact[]> {
     return this.http.get<Contact[]>('http://localhost:58977/api/Contacts');
   }
 

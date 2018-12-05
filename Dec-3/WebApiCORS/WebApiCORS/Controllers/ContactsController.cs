@@ -76,10 +76,10 @@ namespace WebApiCORS.Controllers
         [ResponseType(typeof(Contact))]
         public IHttpActionResult PostContact(Contact contact)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             db.Contacts.Add(contact);
             db.SaveChanges();
