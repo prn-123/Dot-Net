@@ -115,7 +115,8 @@ export class AddContactComponent implements OnInit {
   }
   saveContactData(): void{
     const header = new HttpHeaders({'Content-Type':'application/json'});
-     this.http.post<Contact>("http://localhost:56797/api/contacts", this.contact, {headers:header});
+     this.http.post<Contact>("http://localhost:56797/api/contacts", this.contact, {headers:header})
+ .subscribe(c => this.contacts.push(c));
      console.log('Saved');
   }
 }
