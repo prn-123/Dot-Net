@@ -1,0 +1,154 @@
+Contact.ts
+
+export class Contact {
+    ContactId:number;
+    ContactName:string;
+    Location:string;
+    CurrentLocation:string;
+}
+
+
+app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import{HttpClientModule} from '@angular/common/http';
+import{RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ContactComponent,
+    AddContactComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot([
+      {path:'contacts',component:ContactComponent},
+      {path:'insert',component:AddContactComponent}
+    ])
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+app.component.html
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink='/contacts'>CONTACTS</a>
+</nav>
+<br>
+<router-outlet></router-outlet>
+
+contactComponent.ts
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Contact } from '../contact';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent implements OnInit {
+contacts:Contact[];
+  constructor(private http:HttpClient) { }
+
+  ngOnInit() {
+    this.http.get<Contact[]>("http://localhost:56797/api/contacts")
+    .subscribe(contacts =>this.contacts=contacts);
+
+  }
+
+  
+}
+
+
+contactComponent.html
+<a routerLink = "/insert">Create new</a>
+
+<br>
+<div>
+  <ul>
+    <li *ngFor="let c of contacts">{{c.ContactName}}</li>
+  </ul>
+</div>
+
+AddContactComponent.ts
+import { Component, OnInit } from '@angular/core';
+import { Contact } from '../contact';
+import {HttpClient,HttpHeaders} from '@angular/common/http';
+@Component({
+  selector: 'app-add-contact',
+  templateUrl: './add-contact.component.html',
+  styleUrls: ['./add-contact.component.css']
+})
+export class AddContactComponent implements OnInit {
+
+  contact: Contact;
+  contacts:Contact[];
+  constructor(private http:HttpClient) { }
+
+  ngOnInit() {
+    this.newContact();
+
+    this.http.get<Contact[]>("http://localhost:56797/api/contacts")
+    .subscribe(contacts => this.contacts = contacts);
+
+  }
+
+  newContact():void{
+    this.contact = {
+      ContactId: null,
+      ContactName: '',
+      Location: '',
+      CurrentLocation:''
+    };
+  }
+  saveContactData(): void{
+    const header = new HttpHeaders({'Content-Type':'application/json'});
+     this.http.post<Contact>("http://localhost:56797/api/contacts", this.contact, {headers:header});
+     console.log('Saved');
+  }
+}
+
+
+addContactComponent.html
+<div>
+  <label>Contact Name</label>
+  <input id="contactName" [(ngModel)]="contact.ContactName" type="text">
+<div>
+  <label>Location</label>
+  <input id="location" [(ngModel)]="contact.Location" type="text">
+</div>
+<div>
+  <label>Current Location</label>
+  <input id="currentLocation" [(ngModel)]="contact.CurrentLocation" type="text">
+</div>
+<input type="button" (click)="saveContactData()" value="save">
+<br/>
+
+
+
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Contact Name</th>
+    </tr> 
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of contacts">
+        <td>{{c.ContactName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

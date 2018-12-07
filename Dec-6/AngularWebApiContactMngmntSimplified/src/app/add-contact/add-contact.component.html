@@ -1,0 +1,30 @@
+<div>
+  <label>Contact Name</label>
+  <input id="contactName" [(ngModel)]="contact.ContactName" type="text">
+<div>
+  <label>Location</label>
+  <input id="location" [(ngModel)]="contact.Location" type="text">
+</div>
+<div>
+  <label>Current Location</label>
+  <input id="currentLocation" [(ngModel)]="contact.CurrentLocation" type="text">
+</div>
+<input type="button" (click)="saveContactData()" value="save">
+<br/>
+
+
+
+<div>
+  <table class="table table-responsive">
+    <thead>
+    <tr>
+      <th>Contact Name</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of contacts">
+        <td>{{c.ContactName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
