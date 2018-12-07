@@ -15,15 +15,18 @@
 
 
 <div>
-  <table class="table table-responsive">
+  <table class="table table-responsive table-bordered">
     <thead>
     <tr>
       <th>Contact Name</th>
+      <th>Location</th>
     </tr>
     </thead>
     <tbody>
       <tr *ngFor="let c of contacts">
         <td>{{c.ContactName}}</td>
+        <td>{{c.Location}}</td>
+        <td>{{c.CurrentLocation}}</td>
       </tr>
     </tbody>
   </table>
