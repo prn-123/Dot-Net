@@ -153,3 +153,6 @@ addContactComponent.html
     </tbody>
   </table>
 </div>
+
+
+Bootstrap can be add at index.cshtml file and then we can use classes like table-responsive table bordered ..
