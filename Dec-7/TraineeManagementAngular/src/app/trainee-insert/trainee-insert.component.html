@@ -1,0 +1,35 @@
+<div>
+  <label>app-trainee Name</label>
+  <input id="teaineeName" [(ngModel)]="trainee.TraineeName" type="text" >
+</div>
+<div>
+  <label>Specialization</label>
+  <input id="specialization" [(ngModel)]="trainee.Specialization" type="text" >
+</div>
+<input type="button" (click)="saveTraineeData()" value="save">
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+<div class="table-responsive">
+<table  class="table">
+  <thead>
+    <tr>
+      <th>Trainee Name</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of trainees">
+       <td>{{item.TraineeName}}</td>
+       <td>{{item.Specialization}}</td>
+      </tr>
+</tbody>
+</table>
+</div>
+

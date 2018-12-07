@@ -1,3 +1,18 @@
+
+
+*************ERROR OCCURS IN WEBAPI***********
+
+Paste in APP_START
+------------------------------------------------------
+webapiCofig.ts
+......................................................
+var json = config.Formatters.JsonFormatter;
+json.SerializerSettings.PreserveReferencesHandling =Newtonsoft.Json.PreserveReferencesHandling.Objects;
+config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+
+
+
 Contact.ts
 
 export class Contact {

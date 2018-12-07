@@ -1,0 +1,10 @@
+<div>
+  <ul *ngFor = "let t of trainees">
+    <li>
+      <a routerLink ="/traineedetail/{{t.TraineeId}}">{{t.TraineeName}}</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+
+{{trainees|json}}
